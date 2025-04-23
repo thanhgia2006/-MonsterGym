@@ -1,0 +1,749 @@
+:root{
+    --dark-blue: #0e0d0d;
+    --navy:#a50d0d;
+    --accent:#00aeff;/*này làm màu chữ kết hợp với màu khác(.logo)*/
+    --text: #e0e0e0;/*mauf chuxw menu*/
+    /* #c20909 */
+    --primary: #6a11cb;
+    --secondary: #ff6b6b;
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Monster beast,sans-serif; */
+}
+.monster-text {
+    font-family: "Bangers", sans-serif; /* Hoặc font tương tự */
+    font-size: 48px;
+    color: #ff0000; /* Màu đỏ quái vật */
+    text-shadow: 4px 4px 0px black, 8px 8px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body{
+   
+        background: linear-gradient(180deg, var(--dark-blue), var(--navy), rgb(47, 7, 7));
+        color: rgb(0, 0, 0); /* Để chữ dễ đọc trên nền tối */
+        min-height: 100vh; /* Đảm bảo phủ hết màn hình */
+        /* rgba(199, 0, 0, 0.7) */
+    /* background:  linear-gradient(165deg, var(--dark-blue),var(--navy)); */
+    color:var(--text);
+    overflow-x:hidden;
+     padding-top: 30px;/*khoangr trongs giuẵ header với logo */
+     align-items: center;
+     
+     /* ............... */
+
+}
+body.body-user{
+    
+     display: flex;
+     flex-direction: column;/* saắp theo chiều dọc  */
+     margin: 0;
+     padding: 0;
+     padding-top: 10px;
+     justify-content: center;
+     align-items: center;/* căn giữa ngang */
+     height: 100vh;
+     overflow: hidden;
+     background-color: #fc0101ca;
+     align-items: center;
+}
+/* ---------------------------------------------------------------------------- */
+/* ---Phần index--- */
+header {
+     background-image: url('../images/Header\(3\).jpg');
+    /* background:  rgba(105, 10, 10, 0.9);  url(Header\(1\).jpg);*/
+     background-size: cover;
+     height:70px; 
+     backdrop-filter: blur(10px);
+    position:fixed;
+    width:100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 5%;
+    box-shadow: 0 0 15px hwb(251 31% 0%/0.1);
+ 
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    /* width: 400px; */
+    /* max-width: 400px;/* chinhr kich thuoc tooi da logo*/
+   /* height: auto; */
+    background: linear-gradient(45deg, var(--text),#fc0101ca);/*này là màu hiệu ứng nửa này nửa kia vaf khi lia vao menu*/
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.nav-links{
+display: flex;
+gap: 2rem;
+
+}
+.nav-links a{
+   color: var(--text); 
+   text-decoration: none ;
+   transition:  all 0.3s;
+
+}
+.nav-links a:hover{
+    color: var(--accent);
+}
+.logo-img{
+    width: 37vw;/*tỷ lệ % khung hình*/
+    /* max-width: 400px; */
+}
+@media (max-width:768px){/*khi manf hình đt <768-->*/
+    .logo-img{
+        max-width: 100px;
+        width: 25vw;
+    }
+}
+/* này chỉnh phần giới thiệu cho qua phải */
+section{
+    padding: 8rem 55;
+    min-height: 100vh;
+    
+    /* display: flex; */
+    align-items: center;
+    max-height: 100vh;
+}
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Giữ khoảng cách giữa logo và chữ */
+    padding: 8rem 55px;
+}
+.profile-container {
+    flex-shrink: 0; /* Giữ logo không bị thu nhỏ */
+    position: relative;
+    flex: 1;
+}
+.profile-img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home-center {
+    /* max-width: 1000px; Giới hạn độ rộng phần chữ */
+    margin-left: -20px; /* cho chũw sang trái-40px*/
+    /* flex: 0.5; */
+}
+.home-center h1
+{  background:  linear-gradient(45deg,#bc2727ca,var(--text));
+    font-size: 3.5rem;  /* ddieeuf chinhr cho độ lớn của tựa đề  */
+    font-weight: bold;
+    margin-bottom: 0.1rem;/* khoảng cách giữa tựa đề với join*/
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* px đầu như là  độ rời ra của shadow, thứ 2 shadow di chuyển xuống dưới,thứ 3 là đọ tản shadow 4 7 5 */
+-webkit-background-clip: text;
+-webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+/* rgba(255, 255, 255, 0.8) */
+}
+.home-p
+{
+    /* margin-bottom:-20px ; */
+    /* margin-top: 30px; */
+
+}
+.btn{
+     /* margin-bottom: 0.5rem; */
+   background: linear-gradient(45deg,#e00b0bca,var(--text));
+   /* Cái này là star your nửa màu này màu kia */
+   /* margin-top:-100px ; */
+ 
+   color: #fff;
+   border: none ;
+   padding: 10px 20px;
+   font-size: 1rem;
+   border-radius: 5px;
+   margin-top: 5px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+  
+}
+.btn:hover{
+    background: #0325d3;
+    /* khi trỏ vào thì đổi màu */
+
+}
+.services h2{
+    /* chả biet lam đ gì */
+    font-size: 1.5rem;
+    margin: 10px 0;
+    margin-bottom: 0px;
+}
+.services .services-grid{
+    display: flex;
+    gap:2rem ;
+
+}
+.services .services-card{
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255,0.1);
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px hwb(251 31% 0%/0.1);
+    gap: 12px;
+}
+/* phanf nayf laf phòng gym chỉnh sửa
+ */
+.room-gym{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    /* chỉnh hihf sát lại */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* chinhr sat la */
+    flex-wrap: wrap;
+    
+}
+.room-gym img{
+    /* width: 32%; */
+    width: 32%;
+    height: 150px;
+    /* chỉnh nhỏ theo chiều dọc */
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.204);
+    /* border: 2px solid rgb(255, 255, 255); */
+    /* border: 2px solid#ccc; */
+    transition: all 0.3s;
+    /* margin-top: 10px; */
+    
+}
+.room-gym img:hover{
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+/* chỉnh cho <i> nằm ngang vs h3 */
+.card-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.card-title h3{
+    margin: 0;
+}
+.services .services-card:hover{
+    border-color: var(--accent);
+    transform: translate(-5px);
+
+}
+/* .................... ----------------------------------*/
+/* ......CÁC GÓI MUA...... */
+ul{ 
+ list-style-type:disc;   
+ padding-left: 20px;
+}
+.pricing-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(365px, 1fr));
+    gap: -1rem;
+    margin-top: 1rem;
+    max-width: 10000px;
+    
+}
+.pricing-card{
+    /* background: #a50d0d; */
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+   justify-items: center;
+   transition: transform 0.5s ease;
+   width: 480px;
+   margin-left: 15px;
+
+}
+.pricing-card:hover
+{
+    background-color: #9f0a0a;
+
+}
+.pricing-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+
+}
+.pricing-card p.price{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.pricing-card ul{
+    /* list-style: none; */
+    padding: 0;
+    margin-bottom: 20px;
+}
+.pricing-card ul li{
+margin-bottom: 10px ;
+}
+.pricing-card h2{
+    font-size: 100px;
+}
+.section-arrow-container{
+    text-align: right;
+    margin-right: 230px;
+}
+.section-arrow {
+    font-size: 50px;
+    /* text-align: right; */
+    display: inline-block;
+    animation: moveArrow 2s ease infinite; /* Áp dụng animation */
+    background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary),var(--accent));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  @keyframes moveArrow {
+   
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+     0% {
+      transform: translateY(0); /* Vị trí ban đầu */
+    }
+    50% {
+      transform: translateY(20px); /* Mũi tên di chuyển xuống */
+    }
+    100% {
+      transform: translateY(0); /* Mũi tên trở lại vị trí ban đầu */
+    }
+  }
+/* ------------------------------------------------------------- */
+/* .... USER..... */
+/* WELCOME */
+
+.welcome-title {
+    font-size: 190px;
+    margin-top: -10px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    /* cho chuxw Welcome leen cao */
+}
+/* phần chữ Welcome đổi màu */
+.welcome-title{
+    background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary),var(--accent));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: welcomeAnimation 4s ease infinite;
+    /* animation:  bounce 2s infinite ease-in-out */
+    }
+    @keyframes welcomeAnimation {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+        
+    }
+/* -------------------------------------------------- */
+    /* ..... phàn đăng nhâp(login) USER...*/
+.container {
+      position: relative;
+     width: 500px;/* Khung vien */
+     height: 400px;
+    display: flex;
+     border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        background-image: url(../images/Welcome\(3\).png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 395px;
+        background-position: 100% 0%; /* right top (mặc định) */
+        background-position: 105% 0%; 
+    justify-content: center;
+
+        /* cho hình qua bên tay phải một tý */
+}
+.image-box{
+    /* PHÀN HIMHF MONSTER*/
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 40px;
+}
+
+.image-box img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* padding-top: 50px; */
+   
+}
+      
+      /* Chứa cả login + signup */
+.forms-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        
+     }
+      
+.form-container  {
+     width: 100%;
+     padding: 50px;
+     flex-shrink: 0;
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     position: relative;
+     transition: all 0.5s ease;
+}
+      
+      /* Các định dạng chung */
+.form-container h2 {
+     margin-bottom: 10px;
+     text-align: center;
+     color: #ffffff;
+     font-size: 50px;
+     text-shadow: 2px 5px 5px #000;
+}
+
+.form-container input {
+     width: 100%;
+     padding: 15px;
+     margin: 10px 0;
+     border: 1px solid #808e9b;
+     border-radius: 5px;
+     outline: none;
+     /* color: black; */
+}
+.form-container input::placeholder {
+    /* color: #ddd; */
+     color: rgb(110, 107, 107);
+}
+.form-container button {
+    width: 100%;
+     padding: 15px;
+     margin-top: 10px;
+     border: none;
+     border-radius: 5px;
+     color: #1e272e;
+     font-size: 16px;
+     cursor: pointer;
+     transition: background 0.3s ease;
+ }
+.form-container button:hover {
+      background: #00d8d6;
+}
+.form-container p {
+     margin-top: 15px;
+    color: #ddd;
+ }
+.form-container p span {
+  color: #4ecdc4;
+     cursor: pointer;
+     font-weight: bold;
+ }
+      
+      /* Hiệu ứng chuyển đổi form */
+.container.active-signup .forms-container {
+     transform: translateX(-100%);
+}
+.login{
+    transform: translateY(0);
+
+}
+.signup{
+    transform: translateX(14%);
+    /* background-color: lightcoral; */
+
+}
+.active-login .login{
+transform: translateX(0);
+
+}
+.active-login .signup{
+    transform: translateX(100%);
+}
+.active-signup .login{
+    transform: translateX(-100%);
+
+}
+.active-signup .signup{
+    transform: translateX(0);
+}
+/* ---------------------------------------------- */
+/* phần lịch ăn uống*/
+.schedule-section {
+    padding: 60px 20px;
+    /* background: #111; */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .schedule-table {
+    overflow-x: auto;
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+  }
+  .table-work{
+    /* max-height: 600px; Ví dụ: tăng lên 600px */
+    /* overflow-y: auto; */
+     padding: 10px; 
+ font-size: 1rem;
+ margin-top: 10px;
+  }
+  
+  .schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+    /* margin-bottom: 10px; */
+    
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    /* chỉnh nhỏ bảng */
+    font-size: 1rem;
+  }
+  
+  .schedule-table th {
+    background: #e50914;
+    color: white;
+  }
+  
+  .schedule-table td {
+    background: #333;
+    vertical-align: top;
+    max-height: 190px;
+    overflow-y: auto;
+    padding: 8px;
+    font-size: 1rem;
+    
+
+  }
+  .schedule-work td{
+    max-height: 190px;
+    overflow-y: auto;
+    padding: 6px;
+    font-size: 0.94rem;
+    /* chỉnh khủng nhỏ lại theo chieeud dọc */
+  }
+
+  .schedule-table .day-header {
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+}
+/* tick ngày */
+.day-header .tick{
+    color: rgb(6, 255, 6);
+    display: none;
+    margin-top: 5px;
+}
+.day-header.ticked .tick{
+    display: inline;
+}
+  /* đổi màu màu cho các chữ lớn trong mỗi phần */
+  .section-title{
+    background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: sectionAnimation 4s ease infinite;
+    margin-top: -65px;
+    
+    }
+    @keyframes sectionAnimation {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+    .section-titlee{
+        background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary));
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: sectionAnimation 4s ease infinite;
+        margin-top: 50px;
+        margin-bottom: 28.5px;
+        }
+        .section-titleee{
+            background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary));
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: sectionAnimation 4s ease infinite;
+        margin-top: 50px;
+        margin-bottom: -10px;
+        }
+        
+/*----------------------------------- */
+        /* đánh giá */
+    
+        .feedback-container {
+          max-width: 500px;
+          background: white;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          margin: auto;
+          /* margin-bottom: 50px; */
+          margin-top: 100px;
+          /* background-image: url(../images/star1.png); */
+          margin-bottom: auto;
+          background-position: right;
+          background-size: 300x;
+          background-repeat: no-repeat;
+          /* chỉ một ảnh */
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+          text-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+          
+        }
+    
+        .feedback-title {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 30px;
+          color:#939090; 
+          background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: sectionAnimation 3s ease infinite;
+    /* margin-top: px; */
+    
+    }
+    @keyframes sectionAnimation {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+          
+        
+    
+        .stars {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+    
+        .star {
+          font-size: 30px;
+          color: #aa9f9f;
+          cursor: pointer;
+          transition: color 0.3s;
+        }
+    
+        .star.checked {
+          color: gold;
+        }
+    
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 10px;
+          border: 1px solid #a4a4a4;
+          border-radius: 5px;
+          resize: none;
+          margin-bottom: 15px;
+        }
+    
+        .feedback-btn {
+          width: 100%;
+          padding: 10px;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    
+        .feedbakc-btn:hover {
+          background-color: #218838;
+        } 
+.thankyou-bye   {
+    display: none; 
+    color: rgb(0, 55, 255); 
+    margin-top: 10px;
+    font-size: 17px;
+}
+        /* ....................................................... */
+      /* ---------- */
+        a
+  /* Phan nay bỏ gạch chân khi chột */
+  {
+text-decoration: none;
+  }
+  /* MỤC LỤC */
+  /* ....dòng 52: index(trangchu)........................*/
+/*...... dòng 239: PLAN(các gói mua) dòng 239 phần plan phải có btn............*/
+/*.........dòng 290: USER và dòng 38(phụ cho user)........ */
+/*...........dòng 451: LỊCH TUẦN ............................*/
+/*.. ..........Dòng 504: ĐỔI MÀU CÁC CHỮ......................*/
+/* ...........Dòng 555: đánh giá */
+

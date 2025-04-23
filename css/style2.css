@@ -1,0 +1,181 @@
+:root{
+    --dark-blue: #0e0d0d;
+    --navy:#a50d0d;
+    --accent:#00aeff;/*này làm màu chữ kết hợp với màu khác(.logo)*/
+    --text: #e0e0e0;/*mauf chuxw menu*/
+    /* #c20909 */
+    --primary: #6a11cb;
+    --secondary: #ff6b6b;
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Monster beast,sans-serif; */
+}
+.monster-text {
+    font-family: "Bangers", sans-serif; /* Hoặc font tương tự */
+    font-size: 48px;
+    color: #ff0000; /* Màu đỏ quái vật */
+    text-shadow: 4px 4px 0px black, 8px 8px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+body{
+   
+    background: linear-gradient(180deg, var(--dark-blue), var(--navy), rgb(47, 7, 7));
+    color: rgb(0, 0, 0); /* Để chữ dễ đọc trên nền tối */
+    min-height: 100vh; /* Đảm bảo phủ hết màn hình */
+    /* rgba(199, 0, 0, 0.7) */
+    /* background:  linear-gradient(165deg, var(--dark-blue),var(--navy)); */
+    color:var(--text);
+    overflow-x:hidden;
+    padding-top: 30px;/*khoangr trongs giuẵ header với logo */
+    align-items: center;
+     
+     /* ............... */
+
+}
+body.body-user{
+    
+    display: flex;
+    flex-direction: column;/* saắp theo chiều dọc  */
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;/* căn giữa ngang */
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fc0101ca;
+    align-items: center;
+}
+.btn{
+    /* margin-bottom: 0.5rem; */
+  background: linear-gradient(45deg,#e00b0bca,var(--text));
+  /* Cái này là star your nửa màu này màu kia */
+  /* margin-top:-100px ; */
+  color: #fff;
+  border: none ;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+ 
+}
+.btn:hover{
+   background: #0325d3;
+   /* khi trỏ vào thì đổi màu */
+
+}
+a
+/* Phan nay bỏ gạch chân khi chột */
+{
+text-decoration: none;
+}
+/* ... */
+/* Phần chính */
+/*  */
+.feedback-container {
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: auto;
+  /* margin-bottom: 50px; */
+  margin-top: 100px;
+  /* background-image: url(../images/star1.png); */
+  margin-bottom: auto;
+  background-position: right;
+  background-size: 300x;
+  background-repeat: no-repeat;
+  /* chỉ một ảnh */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+  
+}
+
+.feedback-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color:#939090; 
+  background:  linear-gradient(45deg, var(--primary),var(--secondary),var(--accent),var(--primary),var(--secondary),var(--accent),var(--primary));
+background-size: 300% 300%;
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+font-size: 2rem;
+font-weight: bold;
+text-transform: uppercase;
+animation: sectionAnimation 3s ease infinite;
+/* margin-top: px; */
+
+}
+@keyframes sectionAnimation {
+0%{
+    background-position: 0% 50%;
+}
+50%{
+    background-position: 100% 50%;
+}
+100%{
+    background-position: 0% 50%;
+}
+}
+  
+
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 30px;
+  color: #aa9f9f;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.checked {
+  color: gold;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.feedback-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feedbakc-btn:hover {
+  background-color: #218838;
+} 
+.thankyou-bye   {
+display: none; 
+color: rgb(0, 55, 255); 
+margin-top: 10px;
+font-size: 17px;
+}
+ 
+      

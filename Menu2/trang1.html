@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonsterGym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style2.css"><!--tror toisw css-->
+</head>
+<body>
+      <header>
+        <nav> 
+            <!-- <li>
+                <img src="logo.png" alt="20%">
+            </li> -->
+            <div class="logo" alt="Logo">💪MonsterGym</div>
+            <div class="nav-links">
+                <a href="../Menu/index2.html">🏠 Trang Chủ</a>
+                <!-- <a href="#pricing">Pricing</a> -->
+                <!-- <a href="why-us">Why Us</a> -->
+                <a href="../Menu2/workoutSchedule1.html">📆 Lịch Tập Luyện</a>
+                <a href="../Menu2/mealschedule1.html"> 📆 Thực Đơn Dinh Dưỡng</a>
+                <a href="/Menu/Plan2.html">💸Gói</a>
+                <a href="/Menu/Danhgia.html">⭐Đánh Giá</a>
+                <a href="#" id="userNameDisplay">🙍 Người dùng</a>
+            </div>
+        </nav>
+      </header>
+      <section id="home">
+        <div class="profile-container"><!----->
+            <img src="../images/logo.png" alt="Fitness Trainer"
+            class="logo-img">
+        </div>
+        <div class="home-center"> 
+            <h1><b>CÙNG MONSTERGYM CHINH PHỤC BẢN THÂN!</b></h1><!-- tựa web -->
+            <p class="home-p"><h2>Hãy tham gia MonsterGym!</h2>
+                  Ở MonsterGym chúng tôi có thể giúp bạn thay đổi ngoại hình và sức khỏe theo cách tích cực nhất. Hãy trở thành phiên bản tốt nhất của chính bạn!</p>  
+            <button class="btn">
+              <a href="../Menu/Danhgia.html" style="color:white ;">Bạn đã xác nhận thành công gói Silver! <br>Đây là gói có nhiều người dùng nhất,cũng là gói trải <br> nghiệm được phản hồi là phù hợp với đa số người dùng </a>
+            </button>
+            <div class="services">
+                <h2 class="section-title">Dịch vụ ở MonsterGym</h2>
+                <div class="room-gym"><img src="../images/Phongtap.jpg" alt="">
+                <img src="../images/Phongtapj2.jpg" alt="">
+                <img src="../images/phongtap3.jpg" alt=""></div>
+                <div class="services-grid">
+                    <div class="services-card">
+                        <div class="card-title">
+                        <i class="fa-solid fa-dumbbell" style="color: var(--accent);"></i><!--này là cục tạ font awesome-->
+                        <h3>Môi trường:</h3></div>
+                         <p>"Ở MonsterGym bạn sẽ được trải nghiệm phòng tập hiện đại với các thiết khoa học đầy tối tân, chất lượng không khí đặt chuẩn trong lành, nhiệt độ phù hợp."</p> <!-- câu này để vững chắc sự tin cạy -->
+                    </div>
+                    <div class="services-card"><div class="card-title"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i><h3>Kế Hoạch:</h3></div>
+                        <p>"Lịch trình hằng ngày, bao gồm các bài tập được thiết kế theo khoa học và chế độ ăn giàu dinh dưỡng phù hợp với cơ thể của bạn để đạt kết quả tốt nhất và tối đa hóa tiềm năng cơ bắp của bạn."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section id="pricing">
+      <script>
+        // Lấy tên người dùng từ localStorage và hiển thị
+        document.addEventListener("DOMContentLoaded", () => {
+          const userName = localStorage.getItem("userName");
+          const nameDisplay = document.getElementById("userNameDisplay");
+    
+          if (userName && nameDisplay) {
+            nameDisplay.textContent = `🙍 ${userName}`;
+          }
+        });
+      </script>
+</body>
+</html>

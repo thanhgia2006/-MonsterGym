@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonsterGym</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <section id="schedule" class="schedule-section">
+        <h2 class="section-title">LỊCH TẬP LUYỆN</h2>
+        <div id="workout-schedule"></div>
+
+        <p class="section-subtitle">Thời gian tập luyện hoàn hảo cho bạn! <a href="https://youtube.com/playlist?list=PLNl63psOLymOrLAilPZ6OxLeJ2UuU6BnB&si=JUCgGXrMe2S-c2bN"  target="_blank" style="color: #3091ff;">Video cách tập (Gold)!!</a>
+        </p>
+        <div class="schedule-table">
+            <div class="schedule-work">
+            <table>
+                <thead>
+                    <!-- trang nâng cao -->
+                    <tr>
+                        <th >Thời gian</th>
+                        <th class="day-header"  onclick="toggleTick(this)">Thứ 2 <span class="tick">✔</span></th>
+                        <th class="day-header" onclick="toggleTick(this)">Thứ 3 <span class="tick">✔</span></th>
+                        <th class="day-header" onclick= "toggleTick(this)">Thứ 4 <span class="tick">✔</span></th>
+                        <th class="day-header"onclick="toggleTick(this)">Thứ 5 <span class="tick">✔</span></th>
+                        <th class="day-header"onclick="toggleTick(this)">Thứ 6 <span class="tick">✔</span></th>
+                        <th class="day-header"  onclick= "toggleTick(this)">Thứ 7 <span class="tick">✔</span></th>
+                        
+                    </tr> </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-header"  onclick="toggleTick(this)">Tuần 1,2,3 và 4 <span class="tick">✔</span></td>
+                            <!-- thứ 2 -->
+                            <td style="text-align: left;">Ngực, vai & Tay sau: <br>
+                                 - Đẩy ngực bằng thanh đòn (4 sets x 8-10 reps). <br>
+                                 - Đẩy ngực dốc lên bằng tạ đơn (3 sets x 10-12 reps). <br>
+                                 - Ép ngực (Chest Fly) (3 sets x 12-15 reps). <br>
+                                 - Đẩy vai với tạ đòn(Barbell Shoulder Press)(3 sets x 8-12 reps). <br>
+                                 - Nâng tạ đơn vai một tay (One-Arm Dumbbell Lateral Raise). <br>
+                                 - Đẩy cáp tay sau qua (Triceps Rope Pushdown) (4 sets x 12-15 reps). <br>
+                                 - Kéo dây thừng tay sau qua đầu(tricep Overhead Ễtnsion) (3 sets x 8-10 reps). <br>
+                                 
+                            </td>
+                            <!-- thứ 3 -->
+                            <td style="text-align: left;">Lưng/xô & Tay trước, chân: <br>
+                                - Kéo xà / Kéo xô (Lat Pulldown) (4 sets x 8-10 reps). <br>
+                                - Kéo tạ đòn (Barbell Row) (4 sets x 8-10 reps). <br>
+                                - Kéo cáp ngồi (Seated Cable Row) (3 sets x 10-12 reps). <br>
+                                - Curls tay trước (Bicep Curls) (4 sets x 10-12 reps). <br>
+                                - Curls búa (Hammer Curls) (3 sets x 10-12 reps). <br>
+                                - Squats với tạ đòn (4 sets x 8-10 reps). <br>
+                                - Nhón chân (Calf Raises) với máy hoặc tạ đơn (4 sets x 15-20 reps). <br>
+                                - Romanian Deadlift (Deadlift kiểu Romania) (4 sets x 8-10 reps). <br>
+                            <!-- thứ 4 -->
+                             <td style="text-align: left;">Bắp tay trước & Cẳng tay, mông: <br>
+                                - Gập tay với tạ đơn (Dumbbell Bicep Curl) (4 sets x 8-10 reps). <br>
+                                - Gập tay với thanh tạ (Barbell Curl) (4 sets x 8-10 reps). <br>
+                                - Gập cổ tay với tạ (Wrist Curl) (3 sets x 12-15 reps). <br>
+                                - Gập cổ tay ngửa (Reverse Wrist Curl) (4 sets x 15-20 reps). <br>
+                                - Đá chân ra sau bằng dây cáp (Cable Kickback) (4 sets x 15-20 reps). <br>
+                                - Thrust hông (Hip Thrust) (4 sets x 15-20 reps). <br>
+
+
+                                </td>
+                                 <!-- thứ 5 -->
+                            <td style="text-align: left;">Vai & Cardio, chân: <br>
+                                - Đẩy vai qua đầu (Overhead Press) (4 sets x 8-10 reps). <br>
+                                - Giang tay ngang với tạ đơn (Lateral Raises) (3 sets x 12-15 reps). <br>
+                                - Giơ tay trước với tạ đơn (Front Raises) (3 sets x 12-15 reps). <br>
+                                - Nhún vai với tạ đơn hoặc tạ đòn (Shrugs) (4 sets x 12-15 reps). <br>
+                                - Cardio (Chạy bộ hoặc đạp xe) (20 phút). <br>
+                                - Squats với tạ đòn (4 sets x 8-10 reps). <br>
+                                - Nhón chân (Calf Raises) với máy hoặc tạ đơn (4 sets x 15-20 reps). <br>
+                                - Romanian Deadlift (Deadlift kiểu Romania) (4 sets x 8-10 reps). <br>
+                            </td>
+                                <!-- /thứ 6 -->
+                            <td style="text-align: left;">Full body & Cơ bụng: <br>
+                                - Deadlift với tạ đòn (4 sets x 6-8 reps). <br>
+                                - Hít đất / Đẩy ngực bằng thanh đòn (3 sets x 10-12 reps). <br>
+                                - Kéo xà (Pull-ups) (3 sets x 6-8 reps). <br>
+                                - Plank (3 sets x 45 giây - 1 phút). <br>
+                                - Xoay người kiểu Nga (Russian Twist) (3 sets x 20 reps (10 reps mỗi bên)). <br>
+                                - Nâng chân (Leg Raises) (3 sets x 12-15 reps). <br>
+                            </td>
+                                <!-- thứ 7 -->
+                            <td style="text-align: left;">Cardio & Giãn cơ: <br>
+                                - Chạy bộ nhẹ / Đạp xe (30-45 phút). <br>
+                                - Gập bụng (Crunches) (3 sets x 15-20 reps). <br>
+                                - Plank (3 sets x 30 giây đến 1 phút). <br>
+                                - Giãn cơ toàn thân (15 phút). <br>
+                            </td>
+                    </tr>
+                    
+                </tbody>
+           
+        </table>
+    </div>
+    </div>
+</section>
+<script>
+    function toggleTick(element) {
+      element.classList.toggle("ticked");
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head class="head-star">
+  <meta charset="UTF-8">
+  <title>MonsterGym</title>
+  <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+
+<div class="feedback-container">
+  <h2 class="feedback-title">Đánh giá dịch vụ</h2>
+  
+  <div class="stars">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+  </div>
+
+  <textarea placeholder="Hãy để lại phản hồi của bạn... Chất lượng thực đơn, hiệu quả bài tập, trải nghiệm"></textarea>
+  <button class="feedback-btn">Gửi phản hồi</button>
+  <p id="thankyou" class="thankyou-bye" >Cảm ơn bạn đã đánh giá🌟và phản hồi! <br> Mọi điều tốt xấu điều giúp chúng tôi cải thiện Website❤️</p>
+</div> 
+
+<script>
+  const stars = document.querySelectorAll('.star');
+  let selectedRating = 0;
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      selectedRating = index + 1;
+      updateStars();
+    });
+  });
+
+  function updateStars() {
+    stars.forEach((star, index) => {
+      star.classList.toggle('checked', index < selectedRating);
+    });
+  }
+  const sendBtn = document.querySelector('.feedback-btn');
+  const thankYouMessage = document.getElementById('thankyou');
+  const textarea = document.querySelector('textarea');
+
+  sendBtn.addEventListener('click', () => {
+    const feedback = textarea.value.trim();
+    if (selectedRating === 0 && feedback === "") {
+      alert("Vui lòng chọn số sao hoặc nhập phản hồi.");
+    } else {
+      thankYouMessage.style.display = 'block';
+      textarea.value = "";
+      selectedRating = 0;
+      updateStars();
+    }
+  });
+</script>
+
+</body>
+</html>

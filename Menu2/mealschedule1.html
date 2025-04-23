@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonsterGym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>  
+  <!-- gói silver -->
+    <section id="schedule" class="schedule-section">
+        <h2 class="section-title" style="size: 200px;">Thực đơn dinh dưỡng </h2>
+        <div id="meal-schedule"></div>
+        <p class="section-subtitle">Lịch dinh dưỡng hoàn hảo dành cho bạn! Trung bình 1 ngày ~3200kcal</p>
+        <div class="schedule-table">
+          <table>
+            <thead>
+              <tr>
+                  <th>Thời gian</th>
+                  <th class="day-header"onclick= "toggleTick(this)" >Thứ 2 <span class="tick">✔</span></th>
+                  <th class="day-header"onclick="toggleTick(this)">Thứ 3 <span class="tick">✔</span></th>
+                  <th class="day-header"  onclick= "toggleTick(this)">Thứ 4 <span class="tick">✔</span></th>
+                 
+
+                  
+              </tr> </thead>
+            <tbody>
+              
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >6:30 -8:00 <br>(Bữa sáng)<span class="tick">✔</span></td>
+                  <td >Yến mạch với chuối và việt quất + sữa chua huy lạp + 2 quả trứng luộc + Trà xanh và 1 quả táo. (~632kcal)</td>
+                  <td>Bánh mì thịt đặc biệt + 1 quả trứng luộc+ sinh tố (yến mạch + sữa + whey + 1 quả chuối). (~965kcal)</td>
+                  <td>Sinh tố (yến mạch + sữa + whey + 1 quả chuối + việt quất) + 2 quả trứng luộc (~552kcal)</td>
+                  
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >9:30 -10:30<br>(Bữa phụ 1) <span class="tick">✔</span></td>
+                  <td >Sữa chua Hy Lạp + đậu phộng + 500ml sữa (~400kcal)</td>
+                  <td>2 quả chuối + hạnh nhân (~300kcal)</td>
+                  <td>Hạt chia + hạnh nhân (~250kcal)</td>
+                 
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >12:00 -13:00<br>(Bữa trưa) <span class="tick">✔</span></td>
+                  <td>500g ức gà nướng + 3 bát cơm trắng + rau muống xào + sinh tố bơ (~1100kcal)</td>
+                  <td>Thịt lợn nướng thăn + 3 bát cơm trắng + súp lơ luộc (~1000kcal)</td>
+                  <td>Gà nướng + 2 bát cơm gạo lứt + rau xào + nước uống điện giải (~950kcal)</td>
+                  
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >15:30 -16:00<br>(Bữa phụ 2) <span class="tick">✔</span></td>
+                  <td>Sinh tố whey protein + chuối và việt quất (~250kcal)</td>
+                  <td>Sinh tố whey protein + 1 quả chuối (~220kcal)</td>
+                  <td>Sinh tố bơ + 1 quả trứng (~300kcal)</td>
+                 
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >17:00 -17:15<br>(bữa trước khi tập) <span class="tick">✔</span></td>
+                  <td>2 quả chuối (~180kcal)</td>
+                  <td>Nước điện giải + 2 quả chuối (~200kcal)</td>
+                  <td>Sữa chua Hy Lạp + 1 quả chuối (~190kcal)</td>
+                  
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >20:00 -21:00<br>(Bữa tối) <span class="tick">✔</span></td>
+                  <td>Bò xào ớt chuông + 200g ức gà + 2 củ khoai tây nghiền lớn + 1 bát cơm gạo lứt (~950kcal)</td>
+                  <td>Cá hồi nướng + khoai tây nghiền +2 bắt cơm trắng+ salad trộn (~1000kcal)</td>
+                  <td>Thịt bò tảng nướng +2 bắt cơm trắng + khoai lang nướng + rau muống xào (~1100kcal)</td>
+                  
+                </tr>
+                <tr>
+                  <td class="day-header"onclick= "toggleTick(this)" >22:00 -22:15<br>(Bữa phụ cuối cùng trước khi đi ngủ) <span class="tick">✔</span></td>
+                  <td>200ml sữa + 1 quả táo hoặc 2 hũ sữa chua  (~200kcal)</td>
+                  <td>Phô mai tươi hoặc một ly sữa 300ml (~180kcal)</td>
+                  <td>Sữa chua hoặc 200ml sữa (~150kcal)</td>
+                  
+                </tr>
+              
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <script>
+        function toggleTick(element) {
+          element.classList.toggle("ticked");
+        }
+         
+      </script>
+</body>
+</html>
